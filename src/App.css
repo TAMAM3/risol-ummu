@@ -507,7 +507,6 @@ button {
 
 
 .hero-text h1 {
-
   font-family:
     "DM Serif Display",
     serif;
@@ -523,14 +522,16 @@ button {
 
   line-height: .94;
 
+  color: white;
+
   text-shadow:
     0 2px 3px
     rgba(0,0,0,.28);
 }
 
 
-.hero-text h2 {
 
+.hero-text h2 {
   margin-top: 8px;
 
   font-family:
@@ -546,10 +547,13 @@ button {
 
   line-height: 1.12;
 
+  color: white;
+
   text-shadow:
     0 2px 3px
     rgba(0,0,0,.25);
 }
+
 
 
 .hero-divider {
@@ -2347,4 +2351,13 @@ button {
 
   transition:
     transform .3s ease;
+}
+
+/* =========================================================
+   SCALE WEBSITE
+   Membuat tampilan 100% terlihat seperti zoom 125%
+========================================================= */
+
+#root {
+  zoom: 1.25;
 }
