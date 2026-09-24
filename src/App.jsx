@@ -382,23 +382,6 @@ function App() {
 
                 </div>
 
-
-                <div className="halal-badge">
-
-                  <div className="halal-check">
-                    ✓
-                  </div>
-
-                  <strong>
-                    HALAL
-                  </strong>
-
-                  <small>
-                    &amp; FRESH
-                  </small>
-
-                </div>
-
               </div>
 
 
