@@ -2361,3 +2361,139 @@ button {
 #root {
   zoom: 1.25;
 }
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 27px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  padding: 5px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-inner {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 8px;
+
+    position: relative;
+    z-index: 1002;
+  }
+
+
+  .navigation {
+    position: absolute;
+
+    top: calc(100% + 1px);
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #8f100d;
+
+    padding: 10px 20px;
+
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, .2);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity .2s ease,
+      transform .2s ease,
+      visibility .2s ease;
+
+    z-index: 1001;
+  }
+
+
+  .navigation.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  .navigation a {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,.15);
+  }
+
+
+  .navigation a:last-child {
+    border-bottom: none;
+  }
+
+
+  .nav-social {
+    margin-left: auto;
+  }
+
+}

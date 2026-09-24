@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 
 /*
 =========================================================
@@ -35,6 +36,9 @@ APP
 */
 
 function App() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="website">
 
@@ -46,40 +50,60 @@ function App() {
 
         <div className="navbar-inner">
 
-          <a href="#home" className="brand">
+<a
+  href="#home"
+  className="brand"
+  onClick={() => setMenuOpen(false)}
+>
 
-            <div className="brand-avatar">
-              <div className="avatar-placeholder">
-                👩🏻‍🍳
-              </div>
-            </div>
+  <div className="brand-avatar">
+    <div className="avatar-placeholder">
+      👩🏻‍🍳
+    </div>
+  </div>
 
-            <div className="brand-name">
-              Risol Ummu
-            </div>
+  <div className="brand-name">
+    Risol Ummu
+  </div>
 
-          </a>
+</a>
 
 
-          <nav className="navigation">
 
-            <a href="#home">
+          <nav className={`navigation ${menuOpen ? "open" : ""}`}>
+
+            <a
+              href="#home"
+              onClick={() => setMenuOpen(false)}
+            >
               Home
             </a>
 
-            <a href="#tentang">
+            <a
+              href="#tentang"
+              onClick={() => setMenuOpen(false)}
+            >
               Tentang Kami
             </a>
 
-            <a href="#produk">
+            <a
+              href="#produk"
+              onClick={() => setMenuOpen(false)}
+            >
               Produk
             </a>
 
-            <a href="#outlet">
+            <a
+              href="#outlet"
+              onClick={() => setMenuOpen(false)}
+            >
               Outlet
             </a>
 
-            <a href="#kontak">
+            <a
+              href="#kontak"
+              onClick={() => setMenuOpen(false)}
+            >
               Kontak
             </a>
 
@@ -111,13 +135,21 @@ function App() {
           </div>
 
 
-          <button className="hamburger">
+          <button
+            type="button"
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Buka menu"
+            aria-expanded={menuOpen}
+          >
             ☰
           </button>
+
 
         </div>
 
       </header>
+
 
 
 
