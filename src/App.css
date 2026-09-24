@@ -848,15 +848,12 @@ button {
 ========================================================= */
 
 .section-title {
-
+  width: 100%;
   text-align: center;
 }
 
-
 .section-title h2 {
-
-  color:
-    #a11712;
+  color: #a11712;
 
   font-family:
     "DM Serif Display",
@@ -867,10 +864,12 @@ button {
   font-size: 30px;
 
   line-height: 1;
+
+  text-align: center;
 }
 
-
 .title-decoration {
+  width: 100%;
 
   display: flex;
 
@@ -880,30 +879,29 @@ button {
 
   gap: 9px;
 
-  margin-top: 7px;
+  margin: 7px auto 0;
 }
 
-
 .title-decoration span {
-
   width: 75px;
 
   height: 1px;
 
-  background:
-    #cbb89b;
-}
+  background: #cbb89b;
 
+  display: block;
+}
 
 .title-decoration i {
-
   font-size: 7px;
 
-  color:
-    #c99627;
+  color: #c99627;
 
   font-style: normal;
+
+  flex-shrink: 0;
 }
+
 
 
 
@@ -934,13 +932,13 @@ button {
 
 .about-text .section-title {
 
-  text-align: left;
+  text-align: center;
 }
 
 
 .about-text .title-decoration {
 
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 
@@ -2183,41 +2181,29 @@ button {
 
   /* ABOUT */
 
-  .about-section {
+.about-section {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding-top: 37px;
+}
 
-    grid-template-columns: 1fr;
+.about-text {
+  padding-left: 0;
+}
 
-    gap: 20px;
+.about-text .section-title {
+  text-align: center;
+}
 
-    padding-top: 37px;
-  }
+.about-text .title-decoration {
+  justify-content: center;
+  width: 100%;
+}
 
-
-  .about-text {
-
-    padding-left: 0;
-  }
-
-
-  .about-text .section-title {
-
-    text-align: center;
-  }
-
-
-  .about-text .title-decoration {
-
-    justify-content: center;
-  }
-
-
-  .about-photo {
-
-    height: 205px;
-
-    border-radius:
-      100px 0 0 100px;
-  }
+.about-photo {
+  height: 205px;
+  border-radius: 100px 0 0 100px;
+}
 
 
 
